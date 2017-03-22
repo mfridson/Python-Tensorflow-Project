@@ -29,8 +29,6 @@ class PyMsCognitiveImageSearch(PyMsCognitiveSearch):
           'q' : self.query,
           'count' : quota,
           'offset': self.current_offset,
-          'width': 800,
-          'height': 800,
           'type':'photograph',
           'encodingFormat': 'jpeg'
         }
