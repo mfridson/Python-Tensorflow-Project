@@ -24,7 +24,7 @@ class PyMsCognitiveSearch(object):
     """
     Shell class for the individual searches
     """
-    def __init__(self, api_key, query, query_url, silent_fail=False):
+    def __init__(self,query, query_url,api_key='0e171a97111a4e31aa658e32843b90ba',silent_fail=False):
         self.api_key = api_key
         self.silent_fail = silent_fail
         self.current_offset = 0

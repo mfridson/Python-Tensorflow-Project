@@ -15,7 +15,6 @@ class PyMsCognitiveImageSearch(PyMsCognitiveSearch):
 
     SEARCH_IMAGE_BASE = 'https://api.cognitive.microsoft.com/bing/v5.0/images/search'
 
-    #def __init__(self, query, api_key='3aae19c115a6466cb0ebbaa7e063e798',silent_fail=False, custom_params=''):
     def __init__(self, query, api_key='0e171a97111a4e31aa658e32843b90ba',silent_fail=False, custom_params=''):
         query_url = self.SEARCH_IMAGE_BASE + custom_params
         PyMsCognitiveSearch.__init__(self, api_key, query, query_url, silent_fail=silent_fail)
@@ -29,7 +28,6 @@ class PyMsCognitiveImageSearch(PyMsCognitiveSearch):
           'q' : self.query,
           'count' : quota,
           'offset': self.current_offset,
-          'type':'photograph',
           'encodingFormat': 'jpeg'
         }
         headers = { 'Ocp-Apim-Subscription-Key' : self.api_key }
