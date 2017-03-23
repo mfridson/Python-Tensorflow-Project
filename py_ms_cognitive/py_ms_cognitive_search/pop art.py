@@ -15,9 +15,9 @@ cont_url=[]
 cont_name=[]
 search_term = "pop art"
 search_service = PyMsCognitiveImageSearch(search_term)
-first_fifty_result = search_service.search_all(quota=25000, format='json')
+first_fifty_result = search_service.search_all(quota=50000, format='json')
 
-for i in range(0,25000):
+for i in range(0,50000):
     cont_sz.append(first_fifty_result[i].content_size)
     thumb.append(first_fifty_result[i].thumbnail_url)
     token.append(first_fifty_result[i].image_insights_token)
